@@ -82,14 +82,12 @@ def test_bin_len_mixed_lengths():
 def test_bin_len_duplicates():
     """Use case: uses a set to avoid duplicates."""
     input_list = ["rose", "tulip", "rose", "sunflower"]
-    expected = {3: {"rose", "tulip", "sunflower"}}
+    expected = {4: {"rose"}, 5: {"tulip"}, 9: {"sunflower"}}
     assert bin_len(input_list) == expected
 
 
 def test_bin_len_empty_list():
     """Edge case: handles an empty input list."""
-
-
-input_list = []
-expected = {}
-assert bin_len(input_list) == expected
+    input_list = []
+    expected = {}
+    assert bin_len(input_list) == expected
