@@ -1,17 +1,19 @@
-__author__ = "730579218"
-
 """File to define River class."""
+
+__author__ = "730579218"
 
 from exercises.EX04.fish import Fish
 from exercises.EX04.bear import Bear
 
+
 class River:
+    """A class representing a river."""
     day: int
     bears: list
     fish: list
     
     def __init__(self, num_fish: int, num_bears:int):
-        """New River with num_fish Fish and num_bears Bears""" #docstring
+        """New River with num_fish Fish and num_bears Bears""" 
         self.day: int = 0
         self.fish: list[Fish] = []
         self.bears: list[Bear] = []
@@ -45,7 +47,7 @@ class River:
         for bear in self.bears:
             if bear.hunger_score >= 0:
                 surviving_bears.append(bear)
-        self-bears = surviving_bears
+        self.bears = surviving_bears
         
     def repopulate_fish(self):
         num_new_fish = (len(self.fish) // 2) * 4
