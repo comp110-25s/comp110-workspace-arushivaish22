@@ -1,6 +1,6 @@
 __author__ = "730579218"
 
-"""File to define Bear class."""
+"""File to define Bear class.""" #docstring
 
 class Bear:
     age: int
